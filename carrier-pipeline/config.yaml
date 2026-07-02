@@ -1,0 +1,27 @@
+redshift:
+  host: "warehouse.example.com"
+  port: 5439
+  database: "analytics_db"
+  profile: "warehouse-profile"
+
+carriers:
+  CARRIER_A:
+    ownership: "1P"
+    format: "pipe_delimited"
+    date_format: "%m/%d/%Y"
+    blank_threshold: 100
+  CARRIER_B:
+    ownership: "3P"
+    format: "csv_standard"
+    date_format: "%Y-%m-%d"
+    blank_threshold: 10
+  CARRIER_C:
+    ownership: "3P"
+    format: "tab_delimited"
+    date_format: "%d-%b-%y"
+    blank_threshold: 10
+  CARRIER_D:
+    ownership: "1P"
+    format: "csv_with_header_skip"
+    date_format: "%Y-%m-%d %H:%M:%S"
+    blank_threshold: 50
